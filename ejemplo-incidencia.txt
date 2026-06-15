@@ -1,0 +1,36 @@
+======================================================================
+REPORTE DE INCIDENCIA - SEMANA 6
+======================================================================
+
+ID de Incidencia: INC-01
+Título: Error de sintaxis en el servidor al recibir un JSON malformado
+Prioridad: Media
+Estado: Reportado
+
+Descripción del problema:
+-------------------------
+Al realizar pruebas en la API local (http://localhost:3000/registro) usando 
+Thunder Client, si el cuerpo de la petición (Body) contiene un objeto 
+JSON con un error de sintaxis (por ejemplo, falta una coma entre 
+propiedades), el middleware express.json() falla y el servidor muestra 
+un SyntaxError en la consola.
+
+Pasos para reproducir:
+----------------------
+1. Levantar el servidor local (node server.js).
+2. Crear una petición POST en Thunder Client hacia 
+http://localhost:3000/registro.
+3. En la pestaña Body, enviar un JSON con un error adrede:
+   {
+     "nombre": "Maria"
+     "mensaje": "Hola comunidad"
+   }
+   (Nota: Falta la coma después de "Maria").
+4. Hacer clic en "Send".
+
+Comportamiento esperado:
+------------------------
+El servidor debería capturar el error de forma limpia y responder al 
+cliente con un estado HTTP 400 (Bad Request) y un mensaje amigable, por 
+ejemplo: { "error": "Formato JSON inválido" }.
+

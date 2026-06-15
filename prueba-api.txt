@@ -1,0 +1,12 @@
+Al realizar una petición POST a la ruta http://localhost:3000/registro 
+enviando el JSON con los datos de "Maria", el servidor Express procesa 
+correctamente la información gracias al middleware 'express.json()'.
+
+La API responde exitosamente con un código de estado 200 OK y devuelve 
+el siguiente objeto JSON de confirmación:
+
+{
+  "estado": "Datos recibidos",
+  "nombre": "Maria",
+  "mensaje": "Hola comunidad"
+}
