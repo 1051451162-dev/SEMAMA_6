@@ -1,0 +1,6 @@
+La recepción de datos estructurados es crucial porque permite automatizar el procesamiento,
+análisis y clasificación de la información ciudadana sin intervención manual constante. Esto
+agiliza significativamente los tiempos de respuesta de las entidades públicas ante incidentes o
+solicitudes. Además, facilita la generación de estadísticas precisas y mapas de calor para
+optimizar la toma de decisiones. Al final, se traduce en una gestión pública mucho más
+eficiente, transparente y orientada a resolver las necesidades reales de la comunidad.
